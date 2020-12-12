@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinária Avenida</title>
+
+    <style>
+        div{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Veterinária Avenida</h1>
+
+    <div>
+        Valor da Vacina: <input type="text" id="valor">
+    </div>
+    <div>
+        Possui Convênio: <input type="radio" id="radio" name="conv" value="sim" onclick="mostrarConvenio()">
+        <label for="sim">Sim</label>
+        <input type="radio" id="radio" name="conv" value="nao" onclick="sumirConvenio()" checked>
+        <label for="nao">Não</label>
+    </div>
+    <div id="convenio">
+        Convênio: <select name="selectConvenio" id="selectConvenio">
+            <option value="none">selecione</option>
+            <option value="amgAnimais">Amigo dos Animais</option>
+            <option value="sdAnimal">Saúde Animal</option>
+        </select>
+    </div>
+    <div>
+        <button onclick="calcularDesconto()">Calcular Desconto</button>
+    </div>
+    <div>
+        <p id="resultado"></p>
+    </div>
+
+    <script src="veterinaria.js"></script>
+</body>
+</html>
